@@ -6,7 +6,7 @@
 CERT_DIR="/etc/letsencrypt/live/${DOMAIN}"
 SSL_CERT="${CERT_DIR}/fullchain.pem"
 SSL_KEY="${CERT_DIR}/privkey.pem"
-DOMAIN="*.bradleyalanprice.com"
+DOMAIN="bradleyalanprice.com"
 EMAIL="bradley.alan.price@gmail.com"
 DO_CREDS="/etc/letsencrypt/digitalocean.ini"
 PROPAGATION="60"
@@ -26,7 +26,7 @@ create_certs() {
   certbot certonly --dns-digitalocean \
       --dns-digitalocean-credentials "${DO_CREDS}" \
       --dns-digitalocean-propagation-seconds "${PROPAGATION}" \
-      --domain "${DOMAIN}" -m "${EMAIL}" \
+      --domain "${DOMAIN}" --domain "*.${DOMAIN}" -m "${EMAIL}" \
       --agree-tos --non-interactive --staging
 }
 
