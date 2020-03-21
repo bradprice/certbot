@@ -27,7 +27,7 @@ create_certs() {
       --dns-digitalocean-credentials "${DO_CREDS}" \
       --dns-digitalocean-propagation-seconds "${PROPAGATION}" \
       --domain "${DOMAIN}" --domain "*.${DOMAIN}" -m "${EMAIL}" \
-      --agree-tos --non-interactive --staging
+      --agree-tos --non-interactive
 }
 
 renew_certs() {
