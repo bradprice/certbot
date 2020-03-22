@@ -6,8 +6,6 @@
 CERT_DIR="/etc/letsencrypt/live/${DOMAIN}"
 SSL_CERT="${CERT_DIR}/fullchain.pem"
 SSL_KEY="${CERT_DIR}/privkey.pem"
-DOMAIN="bradleyalanprice.com"
-EMAIL="bradley.alan.price@gmail.com"
 DO_CREDS="/etc/letsencrypt/digitalocean.ini"
 PROPAGATION="60"
 
